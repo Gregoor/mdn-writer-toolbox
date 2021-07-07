@@ -1,8 +1,24 @@
 # MDN Writer Toolbox
 
-Big name points towards ambitions not current feature~s~ which ~are~is:
+Big name points towards ambitions not current feature~s~ which ~are~ is:
 
 - Preview
+
+## How to run it
+
+First, you'll have to install [VSCode](https://code.visualstudio.com/). Then you
+can run:
+
+```
+git clone git@github.com:Gregoor/mdn-writer-toolbox.git
+cd mdn-writer-toolbox
+code .
+```
+
+This will open the project in VSCode. There you can press <kbd>F5</kbd> which
+will compile the extension and open up a new instance of VSCode with the
+extension running inside of it. Navigate to
+[mdn/content](https://github.com/mdn/content) to see the preview in action.
 
 ## What it does
 
