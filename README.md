@@ -29,8 +29,8 @@ Whenever a file is opened, check if it looks like MDN content, meaning:
   `@mdn/yari/content/document.js` can be imported)
 
 If it does, run `npm run start` from the root with a random server port and once
-that server is running, open a panel in the second column to show the rendered
-page.
+that server is running, open a webview panel in the second column to show the
+rendered page.
 
 ## Areas in which it could be improved (some of them design decision)
 
@@ -40,6 +40,16 @@ page.
   yari's lying around. And newest yari is not necessarily compatible with older
   content. Plus this means we have to update the extension less often.\
   But it's worth thinking through again with another mind than mine!
+
+- **Why is the preview not more _instant_?**
+
+  This is somewhat related to the previous item. The extension currently
+  requires the file to be saved so that yari's server picks it up. And then we
+  trigger a reload.\
+  I think a more solid, less server-y approach would be to use _some Yari API_ to
+  _just_ render out a document, without chrome (header, footer, etc.) and throw that
+  HTML directly into the webview panel, while also maintaining the scroll position.
+  That seems a lot harder to do though, so I didn't.
 
 - **How should it select which port to run on?**
 
